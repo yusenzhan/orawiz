@@ -9,14 +9,14 @@ async function main() {
 
   console.log("Deploying...");
 
-  console.log("Deploying NFTFloorPriceFeeds contract...");
-  const NFTFloorPriceFeeds = await hre.viem.deployContract("NFTFloorPriceFeeds");
+  console.log("Deploying MainContract...");
+  const maincontract = await hre.viem.deployContract("MainContract");
 
   console.log("Deployed!");
 
    // Save the addresses
    const addresses = {
-    NFTFloorPriceFeeds: NFTFloorPriceFeeds.address,
+    MainContract: maincontract.address,
   };
 
   console.log(addresses);
